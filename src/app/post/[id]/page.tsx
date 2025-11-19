@@ -1,3 +1,5 @@
+import ClientComponent from "@/app/components/client-components";
+
 export default async function Page({
   params,
 }: {
@@ -5,5 +7,12 @@ export default async function Page({
 }) {
   const { id } = await params;
 
-  return <div>post/[id] : {id}</div>;
+  return (
+    <div>
+      post/[id] : {id}
+      <ClientComponent>
+        <></>
+      </ClientComponent>
+    </div>
+  );
 }

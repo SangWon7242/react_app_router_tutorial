@@ -14,7 +14,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <header>
+          <Link href={"/"}>index</Link>
+          &nbsp;
+          <Link href={"/search"}>search</Link>
+          &nbsp;
+          <Link href={"/post/1"}>post/1</Link>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
